@@ -8,6 +8,8 @@ Local Test
             console.log(`Scan result: ${decodedText}`, decodedResult);
         }
 
+        
+
         function onScanError(errorMessage) {
             // handle on error condition, with error message
         }
