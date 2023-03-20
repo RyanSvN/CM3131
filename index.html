@@ -5,9 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="styles.css">
+
     <title>Allergy App</title>
 
-    <!-- Ionic -->
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <!-- IONIC -->
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
@@ -16,33 +24,77 @@
     <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
 
     <style>
-        
-        #reader {
+    #reader {
         width: 100%;
         }
-        #result {
+    #result {
         text-align: center;
         font-size: 1.5rem;
         }
+
+    #logo {
+        width: 66px;
+        height: 42px;
+        
+    }
+    
+    #title {
+        padding-inline: 70px;
+        padding-right: 78px;
+    }
+    
+    .header{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        padding-top: 10px;
+
+    }
+
+    ion-button{
+        --background: #FFD37C;
+        --background-activated: #eec574;
+
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color:#373737;
+        box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.2);
+        width:100%;
+        height:100%;
+
+
+    }
+
+    ion-toolbar{
+    --min-height:55px!important;
+    --padding-top: 8px;
+    }
+
     </style>
 
 </head>
 <body>
     <ion-app>
         <ion-header>
-            <ion-toolbar color="primary">
+            <ion-toolbar class="header" color="white">
+                <ion-title id="title" class="ion-text-start">ALLERGY</ion-title>
                 <ion-title>
-                    Allergy
+                <img id="logo" src="Assets\asset1.png" alt="Logo"></img>
                 </ion-title>
+                <ion-title id="title" class="ion-text-end">ATTACK</ion-title>
+                
             </ion-toolbar>
         </ion-header>
-        <div id="reader"></div>
-        <div id="result"></div>
-        <p>Hello2</p>
+        
 
         <ion-content>
-
+            <div id="reader"></div>
+            <div id="result"></div>
+            <p>Hello</p>
         </ion-content>
+        <ion-footer>
+            <ion-button expand="full">PREFERENCES<img src="Assets\mdi_user.png" alt="preferences icon"></img></ion-button>
+        </ion-footer>
     
     </ion-app>
     <script>
