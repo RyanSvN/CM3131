@@ -24,28 +24,58 @@
     <script src="https://unpkg.com/html5-qrcode@2.0.9/dist/html5-qrcode.min.js"></script>
 
     <style>
-    #reader {
-        width: 100%;
-        }
-    #result {
-        text-align: center;
-        font-size: 1.5rem;
-        }
+
+    /* HEADER */
 
     #logo {
         width: 58px;
         height: 35px;
-        
     }
-    
+
     .header{
         font-family: 'Roboto', sans-serif;
         font-weight: 700;
         padding-top: 10px;
         word-spacing: 5rem;
         color:#373737;
-
+        background: #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 0px 0px 15px 15px;
     }
+
+    ion-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    
+    ion-col {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    ion-toolbar{
+    --min-height:55px!important;
+    --padding-top: .5rem;
+    --border-width: 4px 0;
+    }
+
+
+    /* BODY */
+
+    #reader {
+        width: 100%;
+        }
+
+    #result {
+        text-align: center;
+        font-size: 1.5rem;
+        }
+
+    
+    /* FOOTER */
 
     ion-button{
         --background: #FFD37C;
@@ -93,29 +123,12 @@
         height:36px;
     }
 
-    ion-toolbar{
-    --min-height:55px!important;
-    --padding-top: .5rem;
-    --border-width: 4px 0;
-    }
-
-    ion-col {
-        text-align: center;
-        margin: 0 auto;
-    }
-    ion-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
     </style>
 
 </head>
 <body>
     <ion-app>
-        <ion-header>
+        <ion-header class="ion-no-border">
             <ion-toolbar class="header" color="white">
                 <ion-row>
                     <ion-col>
@@ -132,7 +145,6 @@
         <ion-content class="ion-padding">
             <div id="reader"></div>
             <div id="result"></div>
-            <p>Hello</p>
         </ion-content>
         <ion-footer>
             <ion-row>
