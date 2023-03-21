@@ -1,9 +1,9 @@
-Testing
-Local Test
-      
-                
-
-                   
+To do:
+    Edit Scanner Interface (Library 'Pro Mode')
+    Fix Weird Mobile UI Glitches
+    Fix/Disable Scan Image File
+    
+               
 
 <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
     <script type="text/javascript">
