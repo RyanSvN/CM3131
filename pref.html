@@ -25,10 +25,11 @@
 
     <style>
 
+    /* HEADER */
+
     #logo {
         width: 58px;
         height: 35px;
-        
     }
     
     .header{
@@ -50,6 +51,10 @@
     
     ion-content {
         color: #FFD37C;
+    }
+
+    #header-fix {
+        text-align: center;
     }
 
 
@@ -76,16 +81,17 @@
 
     }
 
-    #pref_img {
-        width:36px;
-        height:36px;
-    }
+    /* BODY */
+
 
     #title_row {
         height: 4rem;
         padding-bottom:2rem;
     }
 
+    .grid-spacing{
+        margin-bottom: 1rem;
+    }
 
     ion-checkbox {
         --size: 20px;
@@ -106,25 +112,30 @@
     --border-width: 4px 0;
     }
 
+    /* FOOTER */
     ion-col {
-        margin: 1 auto;
+        margin: 0 auto;
     }
+    
     #back_col {
-        text-align:center;
+        text-align: center;
     }
 
+    #pref_img {
+        width:36px;
+        height:36px;
+    }
+
+
+    /* ION GENERAL */
 
     ion-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
-    .grid-spacing{
-        margin-bottom: 1rem;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
     }
+
     </style>
 
 </head>
@@ -133,10 +144,10 @@
         <ion-header class="ion-no-border">
             <ion-toolbar class="header" color="white">
                 <ion-row>
-                    <ion-col>
+                    <ion-col id="header-fix">
                     </ion-col>
-                    <ion-col>ALLERGY</ion-col>
-                    <ion-col><img id="logo" src="Assets\asset1.png" alt="Logo"></img></ion-col>
+                    <ion-col id="header-fix">ALLERGY</ion-col>
+                    <ion-col id="header-fix"><img id="logo" src="Assets\asset1.png" alt="Logo"></img></ion-col>
                     <ion-col>ATTACK</ion-col>
                     <ion-col></ion-col>
                 </ion-row>
