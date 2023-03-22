@@ -142,13 +142,9 @@
         <ion-content class="ion-padding">
             <div id="reader"></div>
             <div id="result"></div>
-            <div id="title"></div>
-            
-            <!-- <strong>Barcode Number: </strong> <div id="BarcodeNumber"></div><br/>
-            
             <strong>Title: </strong> <div id="Title"></div><br/>
         
-            <strong>Entire Response: </strong>
+<!--             <strong>Entire Response: </strong>
                 
             <div id="EntireResponse"></div> -->
             
@@ -165,6 +161,8 @@
 
 
     <script>
+
+        const titleElement = document.getElementById("title");
 
         const scanner = new Html5QrcodeScanner('reader', { 
             // Scanner will be initialized in DOM inside element with id of 'reader'
@@ -188,20 +186,18 @@
             document.getElementById('result').innerHTML = `
             <h2>Success!</h2>
             <p>${result}</p>
-            <p>${fetch(url)
-                .then(response => response.json())
-                .then((data) => {
-                data.products[0].barcode_number;
-                })
-            }</p>
+            <p>${url}</p>
             `
             fetch(url)
-            .then(response => response.json())
-            .then((data) => {
-                data.products[0].barcode_number;
-                
-            });
+                    .then(response => response.json())
+                    .then((data) => {
+                    document.getElementById("Title").innerHTML = (data.products[0].title);
+                    })
+                    .catch(err => { 
+                        throw err 
+                    });
             // Prints result as a link inside result element
+
     
             scanner.clear();
             // Clears scanning instance
@@ -210,6 +206,8 @@
             // Removes reader element from DOM since no longer needed
         
         }
+
+        
     
         function error(err) {
             console.error(err);
@@ -217,9 +215,6 @@
         }
 
     </script>
-
-
-    <!-- <script src="app.js"></script> -->
     
 </body>
 </html>
