@@ -1,3 +1,5 @@
+https://api.barcodelookup.com/v3/products?key=9jzxk18jpnh8kt7pi4ya2hzbl6q5wv
+
 To do:
     Edit Scanner Interface (Library 'Pro Mode')
     Fix Weird Mobile UI Glitches
