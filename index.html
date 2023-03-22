@@ -56,7 +56,6 @@
 
     ion-toolbar{
     --min-height:55px!important;
-    --padding-top: .5rem;
     --border-width: 4px 0;
     }
 
@@ -142,7 +141,16 @@
 
         <ion-content class="ion-padding">
             <div id="reader"></div>
-            <div id="result"></div>
+            <div onload=getAPIdata() id="result"></div>
+            
+            <!-- <strong>Barcode Number: </strong> <div id="BarcodeNumber"></div><br/>
+            
+            <strong>Title: </strong> <div id="Title"></div><br/>
+        
+            <strong>Entire Response: </strong>
+                
+            <div id="EntireResponse"></div> -->
+            
         </ion-content>
         <ion-footer>
             <ion-row>
@@ -150,6 +158,7 @@
                 <!-- <ion-button expand="block">PREFERENCES<img src="Assets\mdi_user.png" alt="preferences icon"></img></ion-button> -->
             </ion-row>
         </ion-footer>
+    
     
     </ion-app>
 
@@ -170,12 +179,20 @@
         // Starts scanner
     
         function success(result) {
-    
-            document.getElementById('result').innerHTML = `
-            <h2>Success!</h2>
-            <p>${result}</p>
-            `;
-            // Prints result as a link inside result element
+            parseInt(result);
+            const api_key = "9jzxk18jpnh8kt7pi4ya2hzbl6q5wv";
+            const url = "https://api.barcodelookup.com/v3/products?barcode=" + result + "&formatted=y&key=" + api_key;
+            
+
+            fetch(url)
+            .then(response => response.json())
+            .then((data) => {
+                document.getElementById('result').innerHTML = `
+                <h2>Success!</h2>
+                <p>${result}</p>
+                `;
+            })
+                // Prints result as a link inside result element
     
             scanner.clear();
             // Clears scanning instance
@@ -189,9 +206,27 @@
             console.error(err);
             // Prints any errors to the console
         }
-    
-        console.log(result)
+
+        const api_key = "9jzxk18jpnh8kt7pi4ya2hzbl6q5wv";
+        console.log("https://api.barcodelookup.com/v3/products?barcode=" + result + "&formatted=y&key=" + api_key);
+         function getAPIdata() {
+            const api_key = "9jzxk18jpnh8kt7pi4ya2hzbl6q5wv";
+            const url = "https://api.barcodelookup.com/v3/products?barcode=8593893774759&formatted=y&key=" + api_key;
+            fetch(url)
+                    .then(response => response.json())
+                    .then((data) => {
+                    document.getElementById("BarcodeNumber").innerHTML = (data.products[0].barcode_number);
+                    document.getElementById("Title").innerHTML = (data.products[0].title);
+                    document.getElementById("EntireResponse").innerHTML = JSON.stringify(data, null,"<br/>");
+                    })
+                    .catch(err => { 
+                        throw err 
+                    });
+        } 
     </script>
+
+
+    <!-- <script src="app.js"></script> -->
     
 </body>
 </html>
