@@ -141,10 +141,8 @@
 
         <ion-content class="ion-padding">
             <div id="reader"></div>
-            <div id="result">
-                <strong>Title: </strong> <div id="Title"></div><br/>
-            </div>
-            
+            <div id="result"></div>
+            <strong>Title: </strong> <div id="Title"></div><br/>
         
 <!--             <strong>Entire Response: </strong>
                 
@@ -184,17 +182,12 @@
             const api_key = "9jzxk18jpnh8kt7pi4ya2hzbl6q5wv";
             const url = "https://api.barcodelookup.com/v3/products?barcode=" + result + "&formatted=y&key=" + api_key;
             
-            fetch(url)
-                .then(response => response.json())
-                .then((data) => {
-                    document.getElementById('result').innerHTML = `
-                    <h2>Success!</h2>
-                    <p>${result}</p>
-                    <p>${url}</p>
-                    `
-                    document.getElementById("Title").innerHTML = (data.products[0].title);
-                })
 
+            document.getElementById('result').innerHTML = `
+            <h2>Success!</h2>
+            <p>${result}</p>
+            <p>${url}</p>
+            `
             // Prints result as a link inside result element
 
     
