@@ -188,9 +188,19 @@
             document.getElementById('result').innerHTML = `
             <h2>Success!</h2>
             <p>${result}</p>
-            <p>${url}</p>
-
-            `;
+            <p>${fetch(url)
+                .then(response => response.json())
+                .then((data) => {
+                data.products[0].barcode_number;
+                })
+            }</p>
+            `
+            fetch(url)
+            .then(response => response.json())
+            .then((data) => {
+                data.products[0].barcode_number;
+                
+            });
             // Prints result as a link inside result element
     
             scanner.clear();
