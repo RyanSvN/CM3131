@@ -15,31 +15,29 @@ const scanner = new Html5QrcodeScanner('reader', {
 // Starts scanner
 scanner.render(success, error);
 
-/* const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '78cbfacc47msh94ddcb4e6d0fb63p1b387ejsn35e5be18df4c',
-        'X-RapidAPI-Host': 'barcodes1.p.rapidapi.com'
+
+async function success(result) {
+
+    const api_url = 'https://edamam-food-and-grocery-database.p.rapidapi.com/parser?upc=' + result;
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '78cbfacc47msh94ddcb4e6d0fb63p1b387ejsn35e5be18df4c',
+            'X-RapidAPI-Host': 'edamam-food-and-grocery-database.p.rapidapi.com'
         }
     };
 
     const response = await fetch(api_url, options);
     const data = await response.json();
-    console.log(data.product.title);
-
-    titleElement = data.product.title; */
 
 
-async function success(result) {
 
-    const api_url = 'https://barcodes1.p.rapidapi.com/?query=' + result;
-
-
-    
     document.getElementById('result').innerHTML = `
     <h2>Success!</h2>
     <p>${result}</p>
     <p>${api_url}</p>
+    <h1>${titleElement.textContent = data.hints[0].food.label}</h1>
     `
     // Prints result as a link inside result element
 

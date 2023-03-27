@@ -17,22 +17,25 @@
 
         async function getData() {
 
-            const api_url = 'https://barcodes1.p.rapidapi.com/?query=5740900815407'
+            const api_url = 'https://edamam-food-and-grocery-database.p.rapidapi.com/parser?upc=8593893774759'
 
             const options = {
                 method: 'GET',
                 headers: {
                     'X-RapidAPI-Key': '78cbfacc47msh94ddcb4e6d0fb63p1b387ejsn35e5be18df4c',
-                    'X-RapidAPI-Host': 'barcodes1.p.rapidapi.com'
+                    'X-RapidAPI-Host': 'edamam-food-and-grocery-database.p.rapidapi.com'
                 }
             };
 
             const response = await fetch(api_url, options);
             const data = await response.json();
-            console.log(data); 
-            titleElement.textContent = data.product.title;
-            imgElement.src = data.product.images;
-            descElement.textContent = data.product.description;
+            console.log(data);
+            console.log(data.hints);
+            console.log(data.hints[0].food.image);
+
+            titleElement.textContent = data.hints[0].food.label;
+            imgElement.src = data.hints[0].food.image;
+            descElement.textContent = data.hints[0].food.foodContentsLabel;
 
 
             }
