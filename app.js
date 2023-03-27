@@ -17,12 +17,12 @@ scanner.render(success, error);
 
 
 
-async function success(result) {
+function success(result) {
 
 
-    const api_url = 'https://barcodes1.p.rapidapi.com/?query=' + result;
+   const api_url = 'https://barcodes1.p.rapidapi.com/?query=' + result;
 
-    const options = {
+/*     const options = {
     method: 'GET',
     headers: {
         'X-RapidAPI-Key': '78cbfacc47msh94ddcb4e6d0fb63p1b387ejsn35e5be18df4c',
@@ -34,7 +34,7 @@ async function success(result) {
     const data = await response.json();
     console.log(data.product.title);
 
-    titleElement = data.product.title;
+    titleElement = data.product.title; */
 
     document.getElementById('result').innerHTML = `
     <h2>Success!</h2>
