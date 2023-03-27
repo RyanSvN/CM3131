@@ -11,14 +11,7 @@ const scanner = new Html5QrcodeScanner('reader', {
     fps: 40, 
 });
 
-printResult();
 
-async function printResult() {
-
-    const newTit = await getData("8593893774759");
-    document.getElementById("poopoo").textContent(newTit.product.title)
-
-}
 // Starts scanner
 scanner.render(success, error);
 
