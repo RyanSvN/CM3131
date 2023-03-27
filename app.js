@@ -17,7 +17,7 @@ scanner.render(success, error);
 
 
 
-function success(result) {
+async function success(result) {
 
 
    const api_url = 'https://barcodes1.p.rapidapi.com/?query=' + result;
