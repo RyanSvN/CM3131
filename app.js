@@ -15,33 +15,28 @@ const scanner = new Html5QrcodeScanner('reader', {
 // Starts scanner
 scanner.render(success, error);
 
-async function getData(eancode) {
 
-    const api_url = 'https://barcodes1.p.rapidapi.com/?query=' + eancode;
 
-    const newTitle = "";
+async function success(result) {
+
+
+    const api_url = 'https://barcodes1.p.rapidapi.com/?query=' + result;
 
     const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '78cbfacc47msh94ddcb4e6d0fb63p1b387ejsn35e5be18df4c',
-            'X-RapidAPI-Host': 'barcodes1.p.rapidapi.com'
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '78cbfacc47msh94ddcb4e6d0fb63p1b387ejsn35e5be18df4c',
+        'X-RapidAPI-Host': 'barcodes1.p.rapidapi.com'
         }
     };
 
     const response = await fetch(api_url, options);
     const data = await response.json();
-
     console.log(data.product.title);
 
-    return data
-    //
-}
+    titleElement = data.product.title;
 
-function success(result) {
 
-    const api_key = "9jzxk18jpnh8kt7pi4ya2hzbl6q5wv";
-    const url = "https://api.barcodelookup.com/v3/products?barcode=" + result + "&formatted=y&key=" + api_key;
     
 
     document.getElementById('result').innerHTML = `
