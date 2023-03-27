@@ -36,13 +36,10 @@ async function success(result) {
 
     titleElement = data.product.title;
 
-
-    
-
     document.getElementById('result').innerHTML = `
     <h2>Success!</h2>
     <p>${result}</p>
-    <p>${url}</p>
+    <p>${api_url}</p>
     `
     // Prints result as a link inside result element
 
