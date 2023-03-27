@@ -15,7 +15,7 @@ const scanner = new Html5QrcodeScanner('reader', {
 // Starts scanner
 scanner.render(success, error);
 
-const options = {
+/* const options = {
     method: 'GET',
     headers: {
         'X-RapidAPI-Key': '78cbfacc47msh94ddcb4e6d0fb63p1b387ejsn35e5be18df4c',
@@ -27,14 +27,12 @@ const options = {
     const data = await response.json();
     console.log(data.product.title);
 
-    titleElement = data.product.title;
+    titleElement = data.product.title; */
 
 
 async function success(result) {
 
     const api_url = 'https://barcodes1.p.rapidapi.com/?query=' + result;
-
-    const 
 
 
     
