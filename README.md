@@ -1,4 +1,7 @@
     // <p>${api_url}</p>
+    <p>${result}</p>
+    const imgElement = document.getElementById("img");
+    <h1>${imgElement.src = data.hints[0].food.image}</h1>
 
             document.getElementById('result').innerHTML = `
             <h2>Success!</h2>
