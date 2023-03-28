@@ -38,7 +38,6 @@ async function success(result) {
     document.getElementById('result').innerHTML = `
     <h2>Success!</h2>
     <p>${result}</p>
-    <p>${api_url}</p>
     <h1>${titleElement.textContent = data.hints[0].food.label}</h1>
     <h1>${imgElement.src = data.hints[0].food.image}</h1>
     <h1>${descElement.textContent = data.hints[0].food.foodContentsLabel}</h1>

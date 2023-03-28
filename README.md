@@ -1,4 +1,4 @@
-    
+    // <p>${api_url}</p>
 
             document.getElementById('result').innerHTML = `
             <h2>Success!</h2>
