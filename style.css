@@ -112,3 +112,8 @@ h2 {
 img {
     color: red;
 }
+
+#highlight {
+    color: red;
+    font-weight:bold;
+}
