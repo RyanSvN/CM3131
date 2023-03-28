@@ -1,6 +1,4 @@
-const titleElement = document.getElementById("title");
-const imgElement = document.getElementById("img");
-const descElement = document.getElementById("desc");
+
 
 // Scanner will be initialized in DOM inside element with id of 'reader'
 const scanner = new Html5QrcodeScanner('reader', { 
@@ -37,10 +35,9 @@ async function success(result) {
 
     document.getElementById('result').innerHTML = `
     <h2>Success!</h2>
-    <p>${result}</p>
-    <h1>${titleElement.textContent = data.hints[0].food.label}</h1>
-    <h1>${imgElement.src = data.hints[0].food.image}</h1>
-    <h1>${descElement.textContent = data.hints[0].food.foodContentsLabel}</h1>
+    <h1>${data.hints[0].food.label}</h1>
+    <img src="${data.hints[0].food.image}" alt="Food Image"></img>
+    <p>${data.hints[0].food.foodContentsLabel}</p>
     `
     // Prints result as a link inside result element
 
