@@ -1,5 +1,6 @@
 const titleElement = document.getElementById("title");
-const imageElement = document.getElementById("")
+const imgElement = document.getElementById("img");
+const descElement = document.getElementById("desc");
 
 // Scanner will be initialized in DOM inside element with id of 'reader'
 const scanner = new Html5QrcodeScanner('reader', { 
