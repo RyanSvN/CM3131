@@ -34,7 +34,8 @@ async function success(result) {
 
 
     document.getElementById('result').innerHTML = `
-    <h1>${data.hints[0].food.label}</h1>
+    <h1>Success!</h1>
+    <h2>${data.hints[0].food.label}</h2>
     <img src="${data.hints[0].food.image}" alt="Error: No Image Available"></img>
     <p>${data.hints[0].food.foodContentsLabel}</p>
     `
