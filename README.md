@@ -1,4 +1,4 @@
-https://api.barcodelookup.com/v3/products?key=9jzxk18jpnh8kt7pi4ya2hzbl6q5wv
+    
 
             document.getElementById('result').innerHTML = `
             <h2>Success!</h2>
