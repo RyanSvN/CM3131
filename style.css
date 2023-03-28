@@ -94,3 +94,10 @@ ion-button{
     width:36px;
     height:36px;
 }
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
