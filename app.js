@@ -1,4 +1,3 @@
-
 // Scanner will be initialized in DOM inside element with id of 'reader'
 const scanner = new Html5QrcodeScanner('reader', { 
     // Sets dimensions of scanning box (set relative to reader element width)
@@ -18,7 +17,9 @@ scanner.render(success, error);
 async function success(result) {
 
     //API URL & OPTIONS
-    const api_url = 'https://edamam-food-and-grocery-database.p.rapidapi.com/parser?upc=' + result;
+    //const api_url = 'https://edamam-food-and-grocery-database.p.rapidapi.com/parser?upc=' + result;
+
+    const api_url = 'https://edamam-food-and-grocery-database.p.rapidapi.com/api/food-database/v2/parser?app_key=63fe82819f9d29625952101be4390ef5&app_id=356ba3dd&nutrition-type=cooking&health%5B0%5D=alcohol-free&upc=' + result + '&category%5B0%5D=generic-foods';
 
     const options = {
         method: 'GET',
@@ -45,27 +46,27 @@ async function success(result) {
     }
 
 
-
+    //Post data to result div
     document.getElementById('result').innerHTML = `
     <h1>Success!</h1>
     <h2>${data.hints[0].food.label}</h2>
     <img src="${data.hints[0].food.image}" alt="Error: No Image Available"></img>
     <p>${ingredientsElement}</p>
     `
-    // Prints result as a link inside result element
 
 
-    scanner.clear();
     // Clears scanning instance
-
-    document.getElementById('reader').remove();
+    scanner.clear();
+    
     // Removes reader element from DOM since no longer needed
+    document.getElementById('reader').remove();
+    
 
 }
 
 
-
+// Prints any errors to the console
 function error(err) {
     console.error(err);
-    // Prints any errors to the console
+    
 }
