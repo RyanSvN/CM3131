@@ -12,5 +12,5 @@ To do:
 Ensure camera is clean, and barcode is clear and center in the scanner
         
 
-test
+test2
     
