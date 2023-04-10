@@ -11,4 +11,6 @@ To do:
 ! SCANNER MAY BE SLOW !
 Ensure camera is clean, and barcode is clear and center in the scanner
         
+
+test
     
