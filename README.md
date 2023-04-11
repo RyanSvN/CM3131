@@ -10,11 +10,8 @@
 - Highlights allergens in the ingredients
 
 ### To do:
-*Priority High:*
 - Link Preferences with Allergen 'highlight'
 - Fix/Disable Scan Image File
-
-*Priority Low:*
 - Edit Scanner Interface (Library 'Pro Mode')
 - Fix Weird Mobile UI Glitches
 
