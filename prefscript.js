@@ -1,6 +1,6 @@
 let boxes = document.getElementsByClassName('box').length;
 
-//saving
+//saving checkbox status (local storage can only save strings)
 function save() {
     for(let i = 1; i <= boxes; i++) {
         var checkbox = document.getElementById(String(i));
@@ -17,5 +17,5 @@ for (let i = 1; i <= boxes; i++) {
         }
     }
 }
+
 window.addEventListener('change', save);
-console.log('test'); 
