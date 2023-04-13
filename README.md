@@ -1,6 +1,6 @@
 # Allergy Attack
 ## Ryan Stevenson 1905905
-
+Application is currently hosted on [ryan-stevenson.com](https://ryan-stevenson.com/) for HTTPS camera access *hosted on netlify*
 
 ### Functionality:
 - Allergen preference selection (with local storage)
