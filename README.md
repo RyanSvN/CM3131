@@ -3,6 +3,8 @@
 Application is currently hosted on [ryan-stevenson.com](https://ryan-stevenson.com/) for HTTPS camera access *hosted on netlify*  
 r.stevenson14@rgu.ac.uk / ryanstevenson7522@gmail.com
 
+Video presentation and demonstration can be found in the Video Folder
+
 ### Functionality:
 - Allergen preference selection (with local storage)
 - Ability to request camera permissions and use it
@@ -18,9 +20,6 @@ r.stevenson14@rgu.ac.uk / ryanstevenson7522@gmail.com
 - Allow permissions for phone torch
 - Edit Scanner Interface (Library 'Pro Mode')
 - Fix Weird Mobile UI Glitches
-
-
-VIDEO LINK
 
 *! SCANNER MAY BE SLOW !*
 Ensure camera is clean with barcode in the center, good internet helps
