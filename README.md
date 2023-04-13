@@ -1,9 +1,9 @@
 # Allergy Attack
 ## Ryan Stevenson 1905905
 Application is currently hosted on [ryan-stevenson.com](https://ryan-stevenson.com/) for HTTPS camera access *hosted on netlify*  
-r.stevenson14@rgu.ac.uk / ryanstevenson7522@gmail.com
+r.stevenson14@rgu.ac.uk / ryanstevenson7522@gmail.com  
 
-Video presentation and demonstration can be found in the Video Folder
+**Video Presentation:** https://liverguac-my.sharepoint.com/:v:/g/personal/r_stevenson14_rgu_ac_uk/EcLd1UAm__JMi-vMwKR-JGYBDAOoG2YqDOsPrcEsYJGhuA?e=yiomXO
 
 ### Functionality:
 - Allergen preference selection (with local storage)
