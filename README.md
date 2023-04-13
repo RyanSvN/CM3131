@@ -1,3 +1,10 @@
+What the project does
+Why the project is useful
+How users can get started with the project
+Where users can get help with your project
+Who maintains and contributes to the project
+
+
 # Allergy Attack
 ## Ryan Stevenson 1905905
 Application is currently hosted on [ryan-stevenson.com](https://ryan-stevenson.com/) for HTTPS camera access *hosted on netlify*
@@ -10,8 +17,9 @@ Application is currently hosted on [ryan-stevenson.com](https://ryan-stevenson.c
 - Highlights allergens in the ingredients
 
 ### To do:
-- Link Preferences with Allergen 'highlight'
+- Link Preferences with Allergen Ingredients
 - Fix/Disable Scan Image File
+- Allow permissions for phone torch
 - Edit Scanner Interface (Library 'Pro Mode')
 - Fix Weird Mobile UI Glitches
 
