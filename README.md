@@ -8,6 +8,7 @@ Who maintains and contributes to the project
 # Allergy Attack
 ## Ryan Stevenson 1905905
 Application is currently hosted on [ryan-stevenson.com](https://ryan-stevenson.com/) for HTTPS camera access *hosted on netlify*
+r.stevenson14@rgu.ac.uk / ryanstevenson7522@gmail.com
 
 ### Functionality:
 - Allergen preference selection (with local storage)
@@ -18,6 +19,8 @@ Application is currently hosted on [ryan-stevenson.com](https://ryan-stevenson.c
 
 ### To do:
 - Link Preferences with Allergen Ingredients
+- Language Compatibility
+- 'Go again' button
 - Fix/Disable Scan Image File
 - Allow permissions for phone torch
 - Edit Scanner Interface (Library 'Pro Mode')
